@@ -1,0 +1,601 @@
+@keyframes rotation {
+    /* Надо исправить: опечатка, исправьте на from */
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    
+}
+/* div {
+     border: 1px solid red;
+    
+} */ 
+
+a {
+    opacity:1;
+}
+
+a:hover {
+    opacity:0.5;
+}
+
+.header {
+    display:flex;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    background-color: #F2F2F2;
+    position: relative;
+    overflow: hidden;
+   
+    /* выше установили ограничения для секции */
+}
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+    height: 568px;
+    width: 568px;
+    background-color:  #2F80ED ;
+    position: absolute;
+    top:64px;
+    right:0;
+    transform: rotate(-15deg);
+    animation:rotation 20s linear infinite;
+       
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
+
+.header__title {
+    width: 730px;
+    font-size: 102px;
+    line-height:96px;
+    color: black;
+    font-weight:bold;
+    position: absolute;
+    align-self:center;
+    left:64px; 
+}
+
+.logo {
+    width: 183px;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo_place_header {
+    height: 32px;
+    background-image: url(../images/logo.svg);
+    position: absolute;
+    top:30px;
+    left:64px;
+
+}
+
+.header__main-illustration {
+    height: 608px;
+    width: 765px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/two_again.png);
+    position: absolute;
+    right:0;
+    bottom:0;
+    z-index: 1;
+}
+
+.header__subtitle {
+    width:388px;
+    color: black;
+    position: absolute;
+    left:64px;
+    bottom: 30px;
+    line-height:25px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.header__link {
+    color:#2F80ED;
+    text-decoration: none;
+}
+
+.description {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding:100px 0;
+}
+
+.two-columns {
+    width:80%;
+    min-width: 784px;
+    justify-content: space-between;
+    display: flex;   
+}
+
+.two-columns__brief {
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px; 
+  font-weight: normal; 
+  margin:0;
+  color:#2F80ED; 
+}
+
+.two-columns__main-text {
+    flex-direction: column;  
+    width: 80%;
+    min-width: 784px;  
+}
+
+.two-columns__paragraph {
+    margin:0;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.two-columns__span-accent {
+    margin:30px 0;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.two-columns__paragraph:first-child{
+    margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-child{
+    margin-top: 30px;
+}
+
+.technics {
+   /* padding-top: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+
+}
+
+.cards {
+    display: flex;
+    margin:0 auto;
+    width: 80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cards__item {
+    display: flex;
+    width: 240px;
+    margin: 60px 100px 0 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards__image {
+    width: 160px;
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+    margin: 0 40px;
+    border-radius: 50%;
+}
+
+.cards__title {
+    margin: 43px auto 16px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;   
+}
+
+.cards__description {
+    margin:auto;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal; 
+}
+
+.cards__item:last-child {
+    position: relative;
+    right:470px;
+}
+
+.video {
+    padding-top: 100px;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video__iframes {
+    margin:50px auto 0;
+    /* Надо исправить: у padding нет отрицательных значений. Они допускаются только для margin */
+}
+
+.video__iframe {
+    width:515px;
+    height:316px;
+}
+
+.video__iframe:first-child {
+    margin-right:20px;
+}
+
+.oakley {
+    background-color:#F2F2F2;
+    margin-top:-60px;
+    padding:160px 0 0;   /* 80 niz */
+    display: flex;
+    justify-content: center;
+}
+
+.oakley .two-columns__paragraph {
+    margin:0;
+}
+
+.digits {
+    display:flex; 
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section-title {
+    display: flex;
+    margin:0 auto;
+    line-height: 69px;
+    font-weight: bold;
+    width:60%; 
+    justify-content: center;
+    font-size:60px;    
+}
+
+.section-subtitle {
+    display:flex;
+    margin: 20px auto 0;
+    justify-content: center;
+    width: 60%;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal; 
+}
+
+.table {
+    margin:0 auto 100px;
+    width: 1100px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+
+.table__cell {
+    width: 250px;
+    margin-top:60px;   
+}
+
+.table__text {
+    margin:0;
+    margin-top:20px;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.table__heading {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.feinman {
+    display: flex;
+    height: 790px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F2F2;
+    padding-top:100px; 
+}
+
+.feinman__title {
+    width: 648px;
+    margin:0 0 70px;
+    position: relative; 
+    text-align: center;
+    line-height: 1.15;
+    font-size: 120px;
+    font-weight: bold; 
+    z-index: 2;
+}
+
+.feinman__subtitle {
+    margin:0;
+    position: relative;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    z-index: 2;
+}
+
+.feinman__link {
+    top:50%;
+    right:48px;
+    position: absolute;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+
+.feinman__face {
+    background-image: url(../images/feinman.png);
+    background-position: center;
+    background-size: cover;
+    width: 867px;
+    height: 637px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.khan {
+    background-color:#F2F2F2;
+    margin:0 auto 0;
+    padding-top: 105px;
+}
+
+.khan__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto 0;
+}
+
+.khan__author {
+    margin:0;
+    line-height:42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.khan__title {
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.khan__quote {
+    width: 790px;
+    margin: 50px auto 36px 0;
+    text-align: left;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__quote-author {
+    margin: 0 0 10px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.khan__quote-author-subline {
+    margin:0 0 68px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__book-container {
+    display: flex;
+}
+
+.khan__book-pic {
+    width: 620px;
+    height: 608px;
+    /* background-image: url(../images_sprint-2/book.jpg); */
+    object-fit: cover;
+    object-position: top;
+}
+
+.khan__buy-link {
+    color:#2F80ED;
+    text-decoration: none;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 auto 0 20px;
+}
+
+.kaufman {
+    background-color: #1F1F1F;
+    color:white;
+    display:flex;     
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.section-title_theme_dark {
+    margin: 90px auto 20px;
+    width: 60%;
+    text-align: center;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-subtitle_theme_dark {
+    margin:0 auto;
+    width: 60%;
+    text-align: center;
+    line-height: 34px;
+    /* Надо исправить: не указать единицы, добавьте px */
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.table__theme_dark {
+    justify-content: space-between;
+    margin:0 auto 90px;
+    display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
+}
+
+.table__cell_theme_dark {
+    width: 200px;
+    margin-top: 80px;
+}
+
+.table__heading_theme_dark {
+    margin:0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table__text_theme_dark {
+    margin-top:20px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.triangle {
+    background-image: url(../images/triangle.svg);
+    background-size: cover;
+    background-position: center;
+    width: 877px;
+    height: 877px;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    right:-210px;
+    animation:rotation 20s linear infinite;
+}
+
+.resources {
+    margin:100px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resources__logo-zone {
+    width: 1100px;
+    margin:80px auto 217px;
+}
+
+.resources__logo {
+    width: 270px;
+    height: 38px;
+    margin: 0;
+
+}
+
+.footer {
+    padding: 60px 0 40px 0;
+    background-color: #1F1F1F;
+    color: white;
+}
+.footer__columns {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    min-height: 350px;
+}
+.footer__column_content_copyright {
+    flex-basis: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo_place_footer {
+    height: 35px;
+    background-image: url(../images/logo_white.svg); 
+}
+
+.footer__author {
+    display: flex;
+    left: 0px;
+    bottom: 18px;
+    margin-top: 18px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column-heading {
+    margin:0;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__column-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column-link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__social-icons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__social-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* stepanov alexandr */
